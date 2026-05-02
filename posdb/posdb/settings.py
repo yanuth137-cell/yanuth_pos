@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4kqawvy$b^$$y&y45rs#y!p50k0xjsye3@#w=hs@ziijjll828
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yanuth.pythonanywhere.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -123,3 +123,12 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL  = '/sales/products/'   # after login → product catalogue
 LOGOUT_REDIRECT_URL = '/accounts/login/'   # after logout → back to login page
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://yanuth.pythonanywhere.com'
+    'http://yanuth.pythonanywhere.com'
+
+]
+
+SECURE_BROESER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
